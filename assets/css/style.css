@@ -1,0 +1,1810 @@
+/* Resetting CSS----------------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    white-space: wrap; /* Prevent line breaks */
+}
+
+/* Global Styles ------------------------------------*/
+
+.container{
+    padding-right: 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/**/
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 10px;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: smooth;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .slide {
+    cursor: pointer;
+    user-select: auto;
+    transition: smooth;
+  }
+  .carousel :where(.slide, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .slide {
+    scroll-snap-align: start;
+    list-style: none;
+    background: #ffffff;
+    cursor: grab;
+    flex-direction: column;
+    border-radius: 10px;
+    scroll-behavior: smooth;
+  }
+  .carousel .slide .img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+
+/**/
+
+
+
+
+/* Swiper styles */
+.swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Setting Fonts Globally -----------------------------*/
+.heading-font {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.body-font-catamaran {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.body-font-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.color-fff {
+    color: #ffffff;
+}
+
+.color-000 {
+    color: #000000;
+}
+
+.color-blue {
+    color: #008AC8;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141414;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
+.headerSticky {
+    background-color: #141414;
+}
+
+.header .siteLogoLink {
+    display: flex;
+}
+
+.header .siteLogo {
+    width: 300px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .navIcons {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.navbar> :first-child {
+    margin-right: 20px;
+}
+
+.navbar .navIcons .icon-circle {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0889e5e8;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+/* Banner ----------------------------------------------*/
+#banner {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#business-center-bangalore #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/bcb-hero-bg.webp);
+}
+#business-center-hsr #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/bchsr-hero-bg.webp);
+}
+#business-center-koramangala #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/bck-hero-bg.webp);
+}
+#business-center-mg-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/bcmg-hero-bg.webp);
+}
+#business-center-marathahalli #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/bcm-hero-bg.webp);
+}
+#business-center-whitefield #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/bcw-hero-bg.webp);
+}
+#business-centre-queens-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/bcq-hero-bg.webp);
+}
+#coworking-space-bangalore #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/csb-hero-bg.webp);
+}
+#coworking-space-hsr #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/cshsr-hero-bg.webp);
+}
+#coworking-space-koramangala #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/csk-hero-bg.webp);
+}
+#coworking-space-in-whitefield #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/csw-hero-bg.webp);
+}
+#coworking-space-marathahalli #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/csm-hero-bg.webp);
+}
+#coworking-space-mg-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/csmg-hero-bg.webp);
+}
+#coworking-space-queens-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/csq-hero-bg.webp);
+}
+#office-space-bangalore #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/osb-hero-bg.webp);
+}
+#office-space-hsr #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/oshsr-hero-bg.webp);
+}
+#office-space-koramangala #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/osk-hero-bg.webp);
+}
+#office-space-marathahalli #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/osm-hero-bg.webp);
+}
+#office-space-mg-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/osmg-hero-bg.webp);
+}
+#office-space-queens-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/osq-hero-bg.webp);
+}
+#office-space-whitefield #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/osw-hero-bg.webp);
+}
+#workspace-in-bangalore #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/wsb-hero-bg.webp);
+}
+#workspace-in-hsr #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/wshsr-hero-bg.webp);
+}
+#workspace-in-koramangala #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/wsk-hero-bg.webp);
+}
+#workspace-in-marathahalli #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/wsm-hero-bg.webp);
+}
+#workspace-in-mg-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/wsmg-hero-bg.webp);
+}
+#workspace-in-queens-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/wsq-hero-bg.webp);
+}
+#workspace-in-whitefield #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/wsw-hero-bg.webp);
+}
+
+#workspace-in-whitefield\(now\) #banner .heroSwiper, 
+#office-space-whitefield\(now\) #banner .heroSwiper,
+#business-center-whitefield\(now\) #banner .heroSwiper,
+#coworking-space-in-whitefield\(now\) #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/desktop-banner/now-hero-bg.webp);
+}
+
+#banner .heroSwiper {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner .bannerContent {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#banner .bannerContent> :first-child {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #000000;
+    border-radius: 7px;
+}
+
+#banner .bannerContent> :first-child button {
+    background-color: #0889e5e8;
+    color: #fff;
+    font-family: "Catamaran";
+    padding-block: 10px;
+    padding-inline: 38px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+}
+
+#banner .bannerContent> :last-child {
+    width: 50%;
+}
+
+#banner .bannerContent h1,
+#banner .bannerContent h2 {
+    font-family: "Catamaran";
+    font-size: 70px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1em;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+#banner .bannerContent p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Catamaran";
+    line-height: 1.3em;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+/*Banner Floating Form */
+.floatingForm * {
+    font-family: 'Poppins', sans-serif;
+}
+
+.floatingForm,
+.floatingForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.floatingForm {
+    width: 400px;
+    background-color: rgb(255 255 255 / 40%);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    right: 90px;
+    z-index: 998;
+    transform: translate(0px, -50%);
+}
+
+.floatingForm header {
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+    background-color: #fff;
+    color: #A90000;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.floatingForm form {
+    row-gap: 10px;
+    padding: 14px;
+}
+
+.floatingForm form span {
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+}
+
+.floatingForm form span input:not(input[type="submit"]) {
+    width: 50%;
+}
+
+.floatingForm form span textarea {
+    width: 100%;
+}
+
+.floatingForm form :not(:last-child)>* {
+    padding: 10px;
+    border: 1px solid #b9b9b7;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.floatingForm form .submitBtn {
+    display: flex;
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #A90000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+#banner .heroSwiper .swiper-pagination {
+    bottom: var(--swiper-pagination-bottom, 40px);
+}
+
+#banner .heroSwiper .swiper-pagination .swiper-pagination-bullet {
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    background: #ffffff;
+}
+
+#banner .heroSwiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: #ffffffe8;
+    color: #ffffff;
+}
+
+.desktop-read-more-btn {
+    cursor: pointer;
+    color: #0889e5e8;
+    text-decoration: underline;
+    font-family: "Catamaran";
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Banner Ends------------------------------------------------------------------------------------------- */
+
+/* Two Column Layout ---------------------------------------*/
+.two-columns-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+/* Left Content -------------------------------------------*/
+.left-content {
+    width: 70%;
+    background-color: #f3f3f3;
+}
+
+.sectionHead h3 {
+    font-size: 32px;
+    font-family: "Catamaran";
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sectionCommon {
+    padding: 60px 45px;
+}
+
+/* Gallery Starts-----------------------------------------*/
+
+#gallery .sectionBody {
+    margin-top: 30px;
+}
+
+/* Gallery Ends-------------------------------------------*/
+
+/* Amenities Starts---------------------------------------*/
+#amenities {
+    background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.3)), url(../images/section-bg/amenities-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 45px;
+}
+
+#amenities .sectionBody {
+    margin-top: 30px;
+}
+
+#amenities .amenitiesLarge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+#amenities .amenitiesLarge .row {
+    display: flex;
+    column-gap: 20px;
+    width: 100%;
+}
+
+#amenities .amenitiesLarge .row .amenitiesCard {
+    width: inherit;
+    display: flex;
+    background-color: #212121;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    row-gap: 15px;
+    border-radius: 5px;
+}
+
+#amenities .amenitiesLarge .row .amenitiesCard .amenitiesIcon {
+    font-size: 90px;
+    color: #ffffff;
+}
+
+#amenities .amenitiesLarge .row .amenitiesCard .amenitiesTitle {
+    font-size: 15px;
+    color: #f2f2f2;
+    text-align: center;
+    font-family: "Catamaran";
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+}
+
+#amenities .amenitiesSlider {
+    background-color: #212121cf;
+    border-radius: 10px;
+    padding: 60px 0px;
+}
+
+#amenities .amenitiesSlider .amenitiesCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#amenities .amenitiesSlider .amenitiesCard .amenitiesIcon {
+    font-size: 40px;
+    color: #ffffff;
+}
+
+#amenities .amenitiesSlider .amenitiesCard .amenitiesTitle {
+    font-size: 15px;
+    color: #f2f2f2;
+    text-align: center;
+    font-family: "Catamaran";
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+}
+
+/* #amenities .amenitiesSwiper .swiper-pagination {
+    bottom: var(--swiper-pagination-bottom, 20px);
+}
+
+#amenities .amenitiesSwiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: #ffffff;
+}
+
+#amenities .amenitiesSwiper .swiper-pagination .swiper-pagination-bullet {
+    background: #c7c7c7;
+} */
+
+/* Amenities Ends----------------------------------------------*/
+
+/* officeSolutions ----------------------------------------------------------*/
+#officeSolutions .sectionBody {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#officeSolutions .sectionBody> :not(:last-child) {
+    border-right: 1px solid #000;
+}
+
+#officeSolutions .sectionBody .col {
+    display: flex;
+    flex-direction: column;
+}
+
+#officeSolutions .sectionBody .col> :not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+
+#officeSolutions .sectionBody .col .solutionCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    row-gap: 15px;
+}
+
+#officeSolutions .sectionBody .col .solutionCard .iconCircle {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #397dd2;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+#officeSolutions .sectionBody .col .solutionCard .iconCircle>span {
+    font-size: 40px;
+}
+
+#officeSolutions .sectionBody .col .solutionCard h2 {
+    font-family: "catamaran";
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.1em;
+    letter-spacing: 2px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* weAreNovel -------------------------------------------------------------*/
+#weAreNovel {
+    background-color: #1f1f1f;
+    display: flex;
+    column-gap: 20px;
+}
+
+#weAreNovel .imgContainer {
+    background-image: url(../images/section-bg/we-are-novel-bg.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+
+#weAreNovel .sectionHead h3 {
+    text-align: left;
+}
+
+#weAreNovel .sectionBody p {
+    color: #fff;
+    font-family: "Catamaran";
+    text-align: justify;
+}
+
+#weAreNovel .col {
+    width: 50%;
+}
+
+#weAreNovel .col:last-child {
+    align-self: center;
+}
+
+/* ourPresence ------------------------------------------------*/
+#ourPresence {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#ourPresence .sectionBody {
+    margin-top: 30px;
+}
+
+#ourPresence .sectionBody .row>div {
+    display: flex;
+}
+
+
+#ourPresence .sectionBody .row.lapContent div:nth-child(even) .image {
+    order: 1;
+}
+
+#ourPresence .sectionBody .row.lapContent div:nth-child(odd) .content {
+    padding-left: 20px;
+}
+
+#ourPresence .sectionBody .row.lapContent div:nth-child(even) .content {
+    padding-right: 20px;
+}
+
+#ourPresence .sectionBody .row .image {
+    display: flex;
+    width: 50%;
+    min-height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ourPresence .sectionBody .row .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+#ourPresence .sectionBody .row .content h3 {
+    font-family: "Catamaran";
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#ourPresence .sectionBody .row .content p {
+    font-family: "catamaran";
+    font-size: 16px;
+    line-height: 1.3em;
+    text-align: justify;
+}
+
+#ourPresence .sectionBody .row .content button {
+    width: fit-content;
+    width: -moz-fit-content;
+    background-color: #0889e5e8;
+    color: #fff;
+    font-family: "Catamaran";
+    padding-block: 10px;
+    padding-inline: 38px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* User Direction Icon */
+#ourPresence .sectionBody .mobileContent .locationContainer .userDirection {
+    width: 70px;
+    height: 55px;
+    position: absolute;
+    border-radius: 20px 0px 0px 20px;
+    background: rgba(206, 206, 206, 0.7);
+    z-index: 799;
+    top: 25%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .userDirection img {
+    animation: tap 3s ease-in-out infinite;
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes tap {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    10% {
+        transform: translate(0.5px, -0.5px);
+    }
+
+    20% {
+        transform: translate(0px, 0px);
+    }
+
+    30% {
+        transform: translate(0.5px, -0.5px);
+    }
+
+    40% {
+        transform: translate(0px, 0px);
+    }
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer button {
+    width: fit-content;
+    width: -moz-fit-content;
+    background-color: #0889e5e8;
+    color: #fff;
+    font-family: "Catamaran";
+    padding-block: 10px;
+    padding-inline: 38px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide {
+    width: 100%;
+    height: 400px;
+}
+
+#ourPresence .sectionBody .mobileContent .ourPresenceSwiper {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Common for all slides */
+#ourPresence .sectionBody .mobileContent .ourPresenceSwiper>* {
+    font-family: Catamaran;
+    color: #ffffff;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide {
+    /* border-radius: 15px; */
+    background: rgba(0, 83, 141);
+}
+
+/* First Slide ---------------------------*/
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide.locationImage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide.locationImage .locationTitle {
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px 20px;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #97979740, #919191, #97979740);
+}
+
+/* Other Slides --------------------------*/
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide.locationContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide.locationContent span {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide.locationContent .locationInnerContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide.locationContent .locationInnerContent .row {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide.locationContent .locationInnerContent .icons {
+    font-size: 45px;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .locationSlide.locationContent .locationInnerContent p {
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Next Button ---------------------------- */
+#ourPresence .sectionBody .mobileContent .ourPresenceSwiper .swiper-button-prev:focus-visible {
+    outline: none;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .swiper-button-prev {
+    width: 100%;
+    height: 100%;
+    top: 23px;
+    left: 0;
+    cursor: pointer;
+}
+
+#ourPresence .sectionBody .mobileContent .locationContainer .swiper-button-prev::after {
+    display: none;
+}
+
+/* ourClients */
+#ourClients {
+    background-color: rgb(245, 234, 236);
+}
+
+#ourClients .sectionBody {
+    margin-top: 30px;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 30%;
+}
+
+#rightSidebarContent {
+    padding: 15px 15px;
+    top: 0;
+}
+
+#rightSidebarContent.stickySidebar {
+    position: fixed;
+    top: 50%;
+    transform: translate(0px, -50%);
+    width: inherit;
+    transition: top 1s;
+}
+
+/* Sidebar Floating Form */
+.sidebarForm * {
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebarForm,
+.sidebarForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarForm {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.sidebarForm header {
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: #A90000;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.sidebarForm form {
+    row-gap: 10px;
+    padding: 14px;
+}
+
+.sidebarForm form span {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.sidebarForm form :not(:last-child)>* {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b9b9b7;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.sidebarForm form .submitBtn {
+    display: flex;
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #A90000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+/* Footer-------------------------------------------------- */
+footer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Back To Top */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 140px;
+    right: 40px;
+    background-color: #0889e5e8;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    z-index: 999;
+}
+
+/* Whatsapp Button */
+.whatsapp-button {
+    position: fixed;
+    left: 10px;
+    bottom: 7px;
+    z-index: 9999;
+}
+
+.whatsapp-button > a{
+    font-size: 60px;
+    text-decoration: none;
+}
+
+
+/* Floating Form Button */
+#floating-lead-btn {
+    display: none;
+    position: fixed;
+    top: 40%;
+    right: -88px;
+    transform: rotate(90deg);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 5px 15px;
+    background-color: #0889e5de;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    border: none;
+    cursor: pointer;
+    z-index: 898;
+    animation: shake 1s cubic-bezier(.36, .07, .19, .97) 1;
+}
+
+/* Floating Lead Form */
+.floating-lead-form>* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.floating-lead-form {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    right: -500px;
+    justify-content: center;
+    align-items: center;
+    z-index: 899;
+    width: 400px;
+    transform: translate(0px, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: right 1s;
+}
+
+.floating-form-container {
+    position: relative;
+    width: 100%;
+}
+
+.floating-form-content {
+    padding: 30px;
+    border-radius: 7px;
+}
+
+.floating-form-content form span {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.floating-form-content form span:not(:last-child) {
+    width: 100%;
+}
+
+.floating-form-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 28px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #A90000;
+    padding: 0px 5px;
+    border-radius: 0 7px 0 0;
+}
+
+.floating-lead-form .rs-popupcontctfld-title {
+    padding: 8px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.floating-form-content h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.floating-form-content form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+}
+
+.floating-form-content form input,
+.floating-form-content form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 24.05px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.floating-form-content form input[type="submit"] {
+    padding-block: 5px;
+    padding-inline: 10px;
+    background-color: #A90000;
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    cursor: pointer;
+    align-self: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: rotate(91deg);
+    }
+
+    20%,
+    80% {
+        transform: rotate(89deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(90deg);
+    }
+
+    40%,
+    60% {
+        transform: rotate(89deg);
+    }
+}
+
+/* Phone field +91 */
+input[type="tel"] {
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='40'%3E%3Ctext x='0' y='24' style='font-family: Poppins, sans-serif; font-size: 13px; fill: grey;'%3E+91%3C/text%3E%3C/svg%3E") no-repeat 13px center;
+    padding-left: 40px !important;
+}
+
+/* Popup Form */
+.contact_form>* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact_form p {
+    display: none;
+}
+
+.contact_form h3 {
+    text-align: center;
+}
+
+.popup_form {
+    display: none;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: .3rem;
+    padding: 27px;
+    z-index: 99999;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup_form h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+.popup_form.show_popup {
+    display: flex;
+}
+
+.popup_form .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #A90000;
+    color: #fff !important;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.popup_form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup_form form span:not(:last-child) {
+    width: 100%;
+}
+
+.popup_form form span:last-child {
+    margin-top: 10px;
+}
+
+.close_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 9999;
+    display: none;
+}
+
+.popup_form form input[type=text],
+.popup_form form input[type=tel],
+.popup_form form input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 3px;
+    border: 1px solid #b9b9b7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.popup_form form textarea {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin: 3px;
+    border: 1px solid #b9b9b7;
+}
+
+.popup_form form input[type="submit"] {
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 15px;
+    background-color: #A90000;
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* Thank You Page CSS */
+.thanksBanner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/section-bg/thanks-page-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.thanksBanner>* {
+    color: #fff;
+    font-family: "Catamaran";
+}
+
+.thanksBanner img {
+    width: 180px;
+}
+
+.thanksBanner .thanksTitle {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.thanksBanner .thanksMsg {
+    font-size: 18px;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.thanksBanner .thanksMsg a {
+    text-decoration: none;
+    color: #cf2e2e;
+    font-weight: 700;
+}
+
+/* Media Queries -----------------------------------------------------------*/
+
+@media only screen and (max-width: 992px) {
+    #banner .heroSwiper .swiper-pagination {
+        bottom: var(--swiper-pagination-bottom, 80px);
+    }
+
+    #banner .bannerContent .desktopContent {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    #banner .bannerContent .mobileContent {
+        display: none;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header .siteLogo {
+        width: 230px;
+    }
+
+    .hideInMobile {
+        display: none;
+    }
+
+    .floatingForm {
+        display: none;
+    }
+
+    #banner .bannerContent {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    #banner .bannerContent> :first-child {
+        width: 100%;
+        text-align: left;
+    }
+
+    #banner .bannerContent> :first-child button {
+        align-self: flex-start;
+    }
+
+    #banner .bannerContent> :last-child {
+        width: 0;
+    }
+
+    #banner .bannerContent h1,
+    #banner .bannerContent h2 {
+        font-size: 28px;
+        text-align: left;
+    }
+
+    #banner .bannerContent p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    #business-center-bangalore #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/bcb-hero-bg.webp);
+}
+#business-center-hsr #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/bchsr-hero-bg.webp);
+}
+#business-center-koramangala #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/bck-hero-bg.webp);
+}
+#business-center-mg-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/bcmg-hero-bg.webp);
+}
+#business-center-marathahalli #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/bcm-hero-bg.webp);
+}
+#business-center-whitefield #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/bcw-hero-bg.webp);
+}
+#business-centre-queens-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/bcq-hero-bg.webp);
+}
+#coworking-space-bangalore #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/csb-hero-bg.webp);
+}
+#coworking-space-hsr #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/cshsr-hero-bg.webp);
+}
+#coworking-space-koramangala #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/csk-hero-bg.webp);
+}
+#coworking-space-in-whitefield #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/csw-hero-bg.webp);
+}
+#coworking-space-marathahalli #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/csm-hero-bg.webp);
+}
+#coworking-space-mg-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/csmg-hero-bg.webp);
+}
+#coworking-space-queens-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/csq-hero-bg.webp);
+}
+#office-space-bangalore #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/osb-hero-bg.webp);
+}
+#office-space-hsr #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/oshsr-hero-bg.webp);
+}
+#office-space-koramangala #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/osk-hero-bg.webp);
+}
+#office-space-marathahalli #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/osm-hero-bg.webp);
+}
+#office-space-mg-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/osmg-hero-bg.webp);
+}
+#office-space-queens-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/osq-hero-bg.webp);
+}
+#office-space-whitefield #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/osw-hero-bg.webp);
+}
+#workspace-in-bangalore #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/wsb-hero-bg.webp);
+}
+#workspace-in-hsr #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/wshsr-hero-bg.webp);
+}
+#workspace-in-koramangala #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/wsk-hero-bg.webp);
+}
+#workspace-in-marathahalli #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/wsm-hero-bg.webp);
+}
+#workspace-in-mg-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/wsmg-hero-bg.webp);
+}
+#workspace-in-queens-road #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/wsq-hero-bg.webp);
+}
+#workspace-in-whitefield #banner .heroSwiper{
+    background-image: linear-gradient(to bottom, rgba(6, 6, 6, 0.3), rgba(3, 3, 3, 0.5)),url(../images/section-bg/mobile-banner/wsw-hero-bg.webp);
+}
+
+    .left-content {
+        width: 100%;
+    }
+
+    #amenities {
+        padding: 60px 30px;
+    }
+
+    #amenities .amenitiesLarge {
+        display: none;
+    }
+
+    #ourPresence .sectionBody .lapContent {
+        display: none;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    /* Office Solutions */
+    #officeSolutions .sectionBody {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #officeSolutions .sectionBody> :not(:last-child) {
+        border-right: none;
+    }
+
+    #officeSolutions .sectionBody .col> :not(:last-child) {
+        border-bottom: none;
+    }
+
+    #officeSolutions .sectionBody .col {
+        flex-direction: row;
+    }
+
+    #officeSolutions .sectionBody .col .solutionCard {
+        width: 50%;
+    }
+
+    #weAreNovel {
+        flex-direction: column;
+    }
+
+    #weAreNovel .imgContainer {
+        min-height: 250px;
+    }
+
+    #weAreNovel .col {
+        width: 100%;
+    }
+
+    #weAreNovel .col:last-child {
+        margin-top: 20px;
+    }
+
+    #ourPresence .sectionBody .mobileContent .locationContainer .locationSlide {
+        height: 350px;
+    }
+
+    .sectionCommon {
+        padding: 60px 25px;
+    }
+
+    #floating-lead-btn {
+        display: flex;
+    }
+
+    .floating-lead-form {
+        max-width: 400px;
+        width: unset;
+    }
+
+    .popup_form {
+        width: 90%;
+    }
+
+    /* Thank you page CSS */
+
+    .thanksBanner img {
+        width: 130px;
+    }
+
+    .thanksBanner .thanksTitle {
+        font-size: 25px;
+    }
+
+    .thanksBanner .thanksMsg {
+        font-size: 1rem;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .hideInMobile {
+        display: none;
+    }
+
+    .floatingForm {
+        display: none;
+    }
+
+    #banner .bannerContent {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    #banner .bannerContent> :first-child {
+        width: 100%;
+    }
+
+    #banner .bannerContent> :last-child {
+        width: 0;
+    }
+
+    #banner .bannerContent h1,
+    #banner .bannerContent h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #banner .bannerContent p {
+        font-size: 15px;
+        text-align: center;
+        padding-inline: 30px;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    /* Amenities */
+    #amenities .amenitiesLarge {
+        display: none;
+    }
+
+    /* Office Solutions */
+    #officeSolutions .sectionBody {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #officeSolutions .sectionBody> :not(:last-child) {
+        border-right: none;
+    }
+
+    #officeSolutions .sectionBody .col> :not(:last-child) {
+        border-bottom: none;
+    }
+
+    #officeSolutions .sectionBody .col {
+        flex-direction: row;
+    }
+
+    #officeSolutions .sectionBody .col .solutionCard {
+        width: 50%;
+    }
+
+    #weAreNovel {
+        flex-direction: column;
+    }
+
+    #weAreNovel .col {
+        width: 100%;
+    }
+
+    #weAreNovel .col:last-child {
+        margin-top: 20px;
+    }
+
+    #ourPresence .sectionBody .lapContent {
+        display: none;
+    }
+
+    #floating-lead-btn {
+        display: block;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .floatingForm {
+        display: none;
+    }
+
+    #banner .bannerContent {
+        padding-left: 50px;
+        padding-right: 50px;
+        height: auto;
+    }
+
+    #banner .bannerContent> :first-child {
+        width: 100%;
+    }
+
+    #banner .bannerContent> :last-child {
+        width: 0;
+    }
+
+    #banner .bannerContent h1,
+    #banner .bannerContent h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #banner .bannerContent p {
+        font-size: 16px;
+        text-align: center;
+        padding-inline: 30px;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .amenitiesSwiper {
+        display: none !important;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    #ourPresence .sectionBody .mobileContent {
+        display: none;
+    }
+
+    #floating-lead-btn {
+        display: block;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    #banner .bannerContent h1,
+    #banner .bannerContent h2 {
+        font-size: 40px;
+    }
+
+    #banner .bannerContent p {
+        font-size: 16px;
+    }
+
+    #banner .bannerContent> :first-child button {
+        display: none;
+    }
+
+    .floatingForm {
+        width: 330px;
+    }
+
+    .amenitiesSwiper {
+        display: none !important;
+    }
+
+    #weAreNovel {
+        flex-direction: column;
+    }
+
+    #weAreNovel .col {
+        width: 100%;
+    }
+
+    #weAreNovel .col:last-child {
+        margin-top: 20px;
+    }
+
+    #ourPresence .sectionBody .mobileContent {
+        display: none;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1299px) {
+
+    #banner .bannerContent h1,
+    #banner .bannerContent h2 {
+        font-size: 50px;
+    }
+
+    #banner .bannerContent p {
+        font-size: 17px;
+    }
+
+    #banner .bannerContent> :first-child button {
+        display: none;
+    }
+
+    .floatingForm {
+        width: 400px;
+    }
+
+    .amenitiesSwiper {
+        display: none !important;
+    }
+
+    #ourPresence .sectionBody .mobileContent {
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1300px and up) */
+@media only screen and (min-width: 1300px) {
+
+    #banner .bannerContent h1,
+    #banner .bannerContent h2 {
+        font-size: 50px;
+    }
+
+    #banner .bannerContent> :first-child button {
+        display: none;
+    }
+
+    .left-content {
+        width: 75%;
+    }
+
+    .amenitiesSwiper {
+        display: none !important;
+    }
+
+    .right-sidebar {
+        width: 25%;
+    }
+
+    #ourPresence .sectionBody .mobileContent {
+        display: none;
+    }
+}

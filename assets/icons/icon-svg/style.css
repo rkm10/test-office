@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?qmrn68');
+  src:  url('fonts/icomoon.eot?qmrn68#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?qmrn68') format('truetype'),
+    url('fonts/icomoon.woff?qmrn68') format('woff'),
+    url('fonts/icomoon.svg?qmrn68#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icons8-whatsapp .path1:before {
+  content: "\e901";
+  color: rgb(255, 255, 255);
+}
+.icon-icons8-whatsapp .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-icons8-whatsapp .path3:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-icons8-whatsapp .path4:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(64, 195, 81);
+}
+.icon-icons8-whatsapp .path5:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-Amenities-Access-Control:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-Tap-Icon:before {
+  content: "\e96d";
+}
+.icon-Amenities-Computer-Rentals:before {
+  content: "\e950";
+  color: #fff;
+}
+.icon-Amenities-Conference-Hall:before {
+  content: "\e951";
+  color: #fff;
+}
+.icon-Amenities-Covid-Protocols:before {
+  content: "\e952";
+  color: #fff;
+}
+.icon-Amenities-High-Speed-Internet:before {
+  content: "\e953";
+  color: #fff;
+}
+.icon-Amenities-Meeting-Rooms:before {
+  content: "\e95c";
+  color: #fff;
+}
+.icon-Amenities-Multi---Cuisine-Cafeteria:before {
+  content: "\e95d";
+  color: #fff;
+}
+.icon-Amenities-Power-Backup:before {
+  content: "\e95e";
+  color: #fff;
+}
+.icon-Amenities-Security--CCTV:before {
+  content: "\e95f";
+  color: #fff;
+}
+.icon-Amenities-Sheltered-Parking:before {
+  content: "\e96c";
+  color: #fff;
+}
+.icon-Business-Centers:before {
+  content: "\e947";
+  color: #fff;
+}
+.icon-Coworking-Spaces:before {
+  content: "\e948";
+  color: #fff;
+}
+.icon-Dedicated-Offices:before {
+  content: "\e949";
+  color: #fff;
+}
+.icon-Hot-Desks:before {
+  content: "\e94a";
+  color: #fff;
+}
+.icon-Private-Cabins:before {
+  content: "\e94b";
+  color: #fff;
+}
+.icon-Virtual-Offices:before {
+  content: "\e94c";
+  color: #fff;
+}
+.icon-Bus-Stop:before {
+  content: "\e94d";
+  color: #fff;
+}
+.icon-Customization:before {
+  content: "\e94e";
+  color: #fff;
+}
+.icon-Extension:before {
+  content: "\e954";
+  color: #fff;
+}
+.icon-Flexible-Terms:before {
+  content: "\e955";
+  color: #fff;
+}
+.icon-Fully-Customizable:before {
+  content: "\e956";
+  color: #fff;
+}
+.icon-Fully-Managed:before {
+  content: "\e957";
+  color: #fff;
+}
+.icon-Hospital:before {
+  content: "\e958";
+  color: #fff;
+}
+.icon-Hotel:before {
+  content: "\e959";
+  color: #fff;
+}
+.icon-Mall:before {
+  content: "\e95a";
+  color: #fff;
+}
+.icon-Metro-Station:before {
+  content: "\e95b";
+  color: #fff;
+}
+.icon-Movable-Glasswalls:before {
+  content: "\e960";
+  color: #fff;
+}
+.icon-Multi-Cuisine-Cafeteria:before {
+  content: "\e961";
+  color: #fff;
+}
+.icon-Multi-Direction:before {
+  content: "\e962";
+  color: #fff;
+}
+.icon-Recreational-Area:before {
+  content: "\e963";
+  color: #fff;
+}
+.icon-Reserved-Desks:before {
+  content: "\e964";
+  color: #fff;
+}
+.icon-Ring-Road:before {
+  content: "\e965";
+  color: #fff;
+}
+.icon-Rooftop-Cafeteria:before {
+  content: "\e966";
+  color: #fff;
+}
+.icon-Rooftop-Meeting-Room:before {
+  content: "\e967";
+  color: #fff;
+}
+.icon-Rooftop-Workspace:before {
+  content: "\e968";
+  color: #fff;
+}
+.icon-Sheltered-Parking:before {
+  content: "\e969";
+  color: #fff;
+}
+.icon-envelope:before {
+  content: "\e96a";
+}
+.icon-phone:before {
+  content: "\e96b";
+}
+.icon-arrow-up:before {
+  content: "\ea3a";
+}
